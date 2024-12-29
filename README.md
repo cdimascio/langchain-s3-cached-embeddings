@@ -13,8 +13,8 @@ pip install langchain-s3-cached-embeddings
 from langchain_s3_text_loaders import S3DirectoryLoader
 
    embeddings = S3EmbeddingsConduit(
-        embeddings=OpenAIEmbeddings(model=model),
-        bucket="my-embeddings-bucket",
+        embeddings=OpenAIEmbeddings(model=model), # required
+        bucket="my-embeddings-bucket", # required
         prefix="my-optional-prefix",
         filenaming_function=lamdba x: f"{x[0]}-{x[1].embedding.txt"}, # optional function to name your embedding file
         cache_behavior=CacheBehavior.NO_CACHE, # set to #CacheBehavior.ONLY_CACHE to use previously cached embeddings
