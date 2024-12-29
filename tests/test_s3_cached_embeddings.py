@@ -1,8 +1,6 @@
 import unittest
 from unittest.mock import patch
 from moto import mock_aws
-import json
-import random
 import boto3
 from .mock_embeddings import MockEmbeddings
 from langchain_s3_cached_embeddings import S3CachedEmbeddings, CacheBehavior
