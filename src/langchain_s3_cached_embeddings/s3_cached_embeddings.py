@@ -114,7 +114,7 @@ class S3CachedEmbeddings(Embeddings):
         :param filename: The file name to retrieve from S3
         :return: Content of the file or an error message
         """
-        key = f"{self._prefix}{filename}"
+        key = f"{self._prefix}/{filename}"
         try:
             response = self._s3_client.get_object(Bucket=self._bucket, Key=key)
             content = response['Body'].read().decode('utf-8')
