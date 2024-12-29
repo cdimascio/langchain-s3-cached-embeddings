@@ -144,7 +144,7 @@ class S3CachedEmbeddings(Embeddings):
                         result = future.result()
                         if "Error" in result:
                             if self._cache_behavior == CacheBehavior.ONLY_CACHE:
-                                logger.info(f"Warning: Skipping some docs in batch starting at index {i}: {result}")
+                                logger.warning(f"Warning: Skipping some docs in batch starting at index {i}: {result}")
                                 pass
                             else:
                                 erm = f"Error processing batch starting at index {i}: {result}"
