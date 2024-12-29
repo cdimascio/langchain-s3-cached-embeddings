@@ -1,6 +1,6 @@
 [project]
 name = "langchain-s3-cached-embeddings"
-version = "0.8.0"
+version = "0.8.1"
 description = "langchain embeddings wrapper to persist embeddings for re-use later"
 authors = [
     {name = "Carmine DiMascio", email = "cdimascio@gmail.com"},
@@ -21,7 +21,7 @@ build-backend = "setuptools.build_meta"
 [tool.pdm]
 distribution = true
 name = "langchain-s3-cached-embeddings"
-version = "0.8.0"
+version = "0.8.1"
 description = "langchain embeddings wrapper to persist embeddings for re-use later"
 authors = ["Carmine DiMascio (cdimascio@gmail.com)"]
 readme = "README.md"
