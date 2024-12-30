@@ -27,7 +27,7 @@ class S3CachedEmbeddings(Embeddings):
                  embeddings: Embeddings, 
                  bucket: str, 
                  prefix: Optional[str], 
-                 filenaming_function: Optional[Callable[[int, int], str]] = None,
+                 filenaming_function: Optional[Callable[[str, int], str]] = None,
                  cache_behavior = CacheBehavior.NO_CACHE):
         self._s3_client = boto3.client('s3')
         self._bucket = bucket

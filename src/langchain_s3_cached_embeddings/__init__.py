@@ -1,1 +1,3 @@
-from .s3_cached_embeddings import S3CachedEmbeddings, CacheBehavior
+from .embeddings.s3_cached_embeddings import S3CachedEmbeddings, CacheBehavior
+
+__all__ = ["S3CachedEmbeddings", "CacheBehavior"]
